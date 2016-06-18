@@ -8,7 +8,7 @@ function generateTable(lastResponse) {
 	var resp=JSON.parse(lastResponse);
 	
 	var headers=new Array("", "last", "high", "volume", "vwap" ,"low", "ask", "bid");
-	var currencies=new Array("", "MXN");
+	var currencies="";
 	var table=document.getElementById("CurrencyTable");
 	table.innerHTML="";
 	
