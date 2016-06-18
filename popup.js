@@ -7,8 +7,8 @@ function generateTable(lastResponse) {
 	console.log('Generating table');
 	var resp=JSON.parse(lastResponse);
 	
-	var headers=new Array("", "last", "buy", "sell", "15m", "24h");
-	var currencies=new Array("USD", "EUR", "CAD", "GBP", "AUD", "BRL", "CHF", "CNY", "DKK", "HKD", "JPY", "NZD", "PLN", "RUB", "SEK", "SGD", "SLL", "THB");
+	var headers=new Array("", "last", "high", "volume", "vwap" ,"low", "ask", "bid");
+	var currencies=new Array("", "MXN");
 	var table=document.getElementById("CurrencyTable");
 	table.innerHTML="";
 	
