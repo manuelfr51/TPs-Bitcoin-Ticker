@@ -11,7 +11,7 @@ function readBlock() {
 				var resp = JSON.parse(lastResponse);
 				console.log(resp);
 				var textToPrint = "";
-				var amount = resp["MXN"]["last"];
+				var amount = resp "MXN" + ["last"];
 				textToPrint = ""+amount.toPrecision(3);
 				
 				if (amount>lastValue){
@@ -42,6 +42,6 @@ chrome.runtime.onMessage.addListener(
 			sendResponse({data: lastResponse});
 	});
 
-chrome.alarms.create('refresh', {periodInMinutes: 1.0});
+chrome.alarms.create('refresh', {periodInMinutes: 3.0});
 chrome.alarms.onAlarm.addListener(onAlarm);
 readBlock();
