@@ -3,7 +3,7 @@ var lastResponse = "";
 
 function readBlock() {
 	var xhr	= new XMLHttpRequest();
-	xhr.open("GET", "https://blockchain.info/ticker");
+	xhr.open("GET", "https://api.bitso.com/v2/ticker");
 	xhr.onreadystatechange = function() {
 		if (xhr.readyState == 4) {
 			if (xhr.status == 200) {
@@ -11,7 +11,7 @@ function readBlock() {
 				var resp = JSON.parse(lastResponse);
 				console.log(resp);
 				var textToPrint = "";
-				var amount = resp["USD"]["last"];
+				var amount = resp["MXN"]["last"];
 				textToPrint = ""+amount.toPrecision(3);
 				
 				if (amount>lastValue){
