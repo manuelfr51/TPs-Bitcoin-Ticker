@@ -20,6 +20,6 @@
 	"manifest_version": 2,
 	"permissions": [
 		"alarms",
-		"https://blockchain.info/"
+		"https://bitso.com/"
 	]
 }
